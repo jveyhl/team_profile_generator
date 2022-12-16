@@ -12,7 +12,7 @@ describe("Engineer", () => {
   });
 
   describe("Get Role", () => {
-    it("getRole() should return \"Engineer\"", () => {
+    it('getRole() should return "Engineer"', () => {
       const role = "Engineer";
 
       const engineer = new Engineer("Lou", 666, "lucifer@gmail.com", "biglou");
@@ -22,7 +22,7 @@ describe("Engineer", () => {
   });
 
   describe("Get Role", () => {
-    it("getRole() should return \"Engineer\"", () => {
+    it('getRole() should return "Engineer"', () => {
       const role = "Engineer";
 
       const engineer = new Engineer("Lou", 666, "lucifer@gmail.com", "biglou");
