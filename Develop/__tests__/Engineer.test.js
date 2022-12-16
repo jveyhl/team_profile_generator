@@ -3,29 +3,31 @@ const Engineer = require("../lib/Engineer");
 describe("Engineer", () => {
   describe("Set GitHub", () => {
     it("Can set GitHUb account via constructor", () => {
-      const employee = new Employee();
+      const github = "biglou";
 
-      expect(typeof employee).toEqual("object");
+      const engineer = new Engineer("Lou", 666, "lucifer@gmail.com", github);
+
+      expect(engineer.github).toEqual(github);
     });
   });
 
-//   describe("Set name", () => {
-//     it("Can set name via constructor arguments", () => {
-//       const name = "Joe";
+  describe("Get Role", () => {
+    it("getRole() should return \"Engineer\"", () => {
+      const role = "Engineer";
 
-//       const employee = new Employee(name);
+      const engineer = new Engineer("Lou", 666, "lucifer@gmail.com", "biglou");
 
-//       expect(employee.name).toEqual(name);
-//     });
-//   });
+      expect(engineer.getRole()).toEqual(role);
+    });
+  });
 
-//   describe("Set id", () => {
-//     it("Can set id via constructor argument", () => {
-//       const id = 666;
+  describe("Get Role", () => {
+    it("getRole() should return \"Engineer\"", () => {
+      const role = "Engineer";
 
-//       const employee = new Employee("Lou", id);
+      const engineer = new Engineer("Lou", 666, "lucifer@gmail.com", "biglou");
 
-//       expect(employee.id).toEqual(id);
-//     });
-//   });
+      expect(engineer.getRole()).toEqual(role);
+    });
+  });
 });
