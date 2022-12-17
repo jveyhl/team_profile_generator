@@ -19,9 +19,8 @@ const outputPath = path.join(DIST_DIR, "index.html");
 // Access function in template.js to generate HTML
 const render = require("./src/template.js");
 
-// Create empty arrays for team and id as place holders
+// An array to hold team member objects
 const teamArray = [];
-const idArray = [];
 
 // Start application
 function initApp() {
@@ -83,7 +82,6 @@ function initApp() {
           answers.managerOfficeNumber
         );
         teamArray.push(manager);
-        idArray.push(answers.managerId);
 
         // Add team members for the manager to manage
         addTeam();
@@ -155,12 +153,12 @@ function initApp() {
         {
           type: "input",
           name: "engineerGithub",
-          message: "Enter a user name for the Engineer:",
+          message: "Enter a GitHub user name for the Engineer:",
           validate: (answer) => {
             if (answer !== "") {
               return true;
             }
-            return "Please enter a user name for the Engineer.";
+            return "Please enter a GitHub user name for the Engineer.";
           },
         },
       ])
@@ -172,7 +170,6 @@ function initApp() {
           answers.engineerGithub
         );
         teamArray.push(engineer);
-        idArray.push(answers.engineerId);
 
         // Allow the user to add an Intern or end the application
         addTeam();
@@ -236,7 +233,6 @@ function initApp() {
           answers.internSchool
         );
         teamArray.push(intern);
-        idArray.push(answers.internId);
 
         // Allow the user to add an Engineer or end the application
         addTeam();
@@ -248,7 +244,7 @@ function initApp() {
     if (!fs.existsSync(DIST_DIR)) {
       fs.mkdirSync(DIST_DIR);
     }
-    console.log("Generating Team Profile.... ");
+    console.log("Generating Team Profile...");
     fs.writeFileSync(outputPath, render(teamArray), "utf-8");
   }
 

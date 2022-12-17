@@ -101,14 +101,14 @@ module.exports = (team) => {
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
             integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
         <!-- Local CSS -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../src/style.css">
     </head>
 
     <body>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 jumbotron text-white mb-3">
-                    <h1 class="text-center">The Dream Team</h1>
+                    <h1 class="text-center">Meet The Team!</h1>
                 </div>
             </div>
         </div>
