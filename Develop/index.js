@@ -1,4 +1,4 @@
-// Dependencies
+// Dependenciess
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
@@ -96,7 +96,7 @@ function initApp() {
           type: "list",
           name: "memberChoice",
           message: "Which team member would you like to add?",
-          choices: ["Engineer", "Intern", "End application"],
+          choices: ["Engineer", "Intern", "I'm finished building my team!"],
         },
       ])
       .then((userChoice) => {
