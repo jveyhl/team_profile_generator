@@ -23,7 +23,7 @@ Ensure that you have Node.js and npm installed. Download the "Develop" folder in
 
 The following image shows the application's appearance and functionality:
 
-![Alt text](/Develop/images/screenshot.png)
+![Alt text](/images/screenshot.png)
 
 ## Deployed Application
 
